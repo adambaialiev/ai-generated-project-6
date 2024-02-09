@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Button</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #counter {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        #increaseButton {
+            padding: 10px 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">0</div>
+    <button id="increaseButton">Increase</button>
+    <script>
+        document.getElementById('increaseButton').addEventListener('click', function() {
+            var counter = document.getElementById('counter');
+            var count = parseInt(counter.innerText);
+            counter.innerText = count + 1;
+        });
+    </script>
+</body>
+</html>
